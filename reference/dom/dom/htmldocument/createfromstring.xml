@@ -33,7 +33,45 @@
    <varlistentry>
     <term><parameter>options</parameter></term>
     <listitem>
-     &dom.parameter.compliant.options;
+     <para>
+      <parameter>options</parameter> can be a combination of the following constants:
+      <variablelist>
+       <varlistentry>
+        <term><constant>LIBXML_COMPACT</constant></term>
+        <listitem>
+         <para>
+          If this flag is passed, small nodes allocation optimization is activated. This may speed up your application.
+         </para>
+        </listitem>
+       </varlistentry>
+       <varlistentry>
+        <term><constant>LIBXML_HTML_NOIMPLIED</constant></term>
+        <listitem>
+         <para>
+          If this flag is passed, the automatic adding of implied html/body elements is suppressed.
+         </para>
+        </listitem>
+       </varlistentry>
+       <varlistentry>
+        <term><constant>LIBXML_NOERROR</constant></term>
+        <listitem>
+         <para>
+          If this flag is passed, errors and warnings from libxml will be suppressed and they will not throw exceptions.
+         </para>
+        </listitem>
+       </varlistentry>
+       <varlistentry>
+        <term><constant>Dom\HTML_NO_DEFAULT_NS</constant></term>
+        <listitem>
+         <simpara xmlns="http://docbook.org/ns/docbook">
+          It is also possible to pass <constant>Dom\HTML_NO_DEFAULT_NS</constant>
+          to disable the use of the HTML namespace and the template element.
+          This should only be used if the implications are properly understood.
+         </simpara>
+        </listitem>
+       </varlistentry>
+      </variablelist>
+     </para>
     </listitem>
    </varlistentry>
    <varlistentry>
